@@ -36,6 +36,7 @@
 #
 class sensu::enterprise (
   Optional[String] $conf_dir            = $::sensu::conf_dir,
+  Variant[String,Array,Undef] $confd_dir = $::sensu::confd_dir,
   Optional[String]  $deregister_handler = $::sensu::deregister_handler,
   Optional[Boolean] $deregister_on_stop = $::sensu::deregister_on_stop,
   Optional[String]  $gem_path           = $::sensu::gem_path,
